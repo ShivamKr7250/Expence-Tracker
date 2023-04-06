@@ -1,6 +1,8 @@
 using Expence_Tracker.Models;
 using Microsoft.EntityFrameworkCore;
 
+// JAI SHREE RAM 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
