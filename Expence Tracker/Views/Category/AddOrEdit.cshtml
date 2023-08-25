@@ -1,7 +1,7 @@
 ﻿@model Expence_Tracker.Models.Category
 
 @{
-    ViewData["Title"] = "AddorEdit";
+    ViewData["PageTitle"] = Model.CategoryId == 0?"Create a new Category": "Edit Category";
 }
 
 <div class="row">
@@ -11,12 +11,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
             <div class="mb-3" >
-                <div class='e-btn-group custom-rbt-group'>
-                <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
-                <label class="e-btn" for="radioleft">Expense</label>
-                <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
-                <label class="e-btn" for="radiomiddle">Income</label>
-                </div>
+                    <div class='e-btn-group custom-rbt-group'>
+                        <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
+                        <label class="e-btn" for="radioleft"> Expense </label>
+                        <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
+                        <label class="e-btn" for="radiomiddle"> Income </label>
+                    </div>
             </div>
             <div class="mb-3">
                 <ejs-textbox id="title" placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>

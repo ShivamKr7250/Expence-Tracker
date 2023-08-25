@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<Expence_Tracker.Models.Category>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["PageTitle"] = "Categories";
+    ViewData["PageActionText"] = "+ New Category";
+    ViewData["PageActionUrl"] = "/Category/AddorEdit";
 }
 
 <div class="row">
@@ -25,9 +27,9 @@
 
 <script id="typeColumnTemplate" type="text/x-template">
     ${if(Type=="Income")}
-    <span class="badge bg-sucess">${type}</span>
+    <span class="badge bg-success">${Type}</span>
     ${else}
-    <span class="badge bg-danger">${type}</span>
+    <span class="badge bg-danger">${Type}</span>
     ${/if}
 </script>
 

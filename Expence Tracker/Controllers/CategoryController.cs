@@ -31,7 +31,7 @@ namespace Expence_Tracker.Controllers
         public IActionResult AddOrEdit(int id = 0)
         {
             if (id == 0)
-            return View(new Category());
+                return View(new Category());
             else
                 return View(_context.Categories.Find(id));
         }
