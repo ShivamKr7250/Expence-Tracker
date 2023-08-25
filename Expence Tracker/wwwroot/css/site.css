@@ -5,12 +5,18 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
+    
   }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: "Inter"
+}
+
+*:not(.fa-solid):not(.fa):not(.e-icons){
+    font-family: "Inter"
 }
 
 body {
@@ -22,32 +28,91 @@ body {
 .e-bigger{   
     font-size : x-large;
 }
+
+/*Button*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/*Hyperlink*/
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*Grid*/
 .e-grid {
-    border : 0;
+    border: 0;
     border-radius: 5px;
 }
 
-.e-btn-group.custom-rbt-group{
-    width : 100%;
+    .e-grid .e-gridcontent, .e-grid .e-table {
+        background-color: #1a222b;
+    }
+
+    .e-grid .e-gridheader {
+        border: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px;
+        background-color: #222b33;
+    }
+
+        .e-grid .e-gridheader .e-headercell {
+            background-color: #222b33;
+        }
+
+    .e-grid .e-gridpager {
+        background-color: #1a222b;
+    }
+
+    .e-grid .e-pagercontainer {
+        border: none;
+        background-color: #1a222b;
+    }
+
+    .e-grid .e-content table {
+        padding: 0px 10px;
+    }
+
+.e-pagercontainer .e-icons {
+    background-color: #1a222b;
+    border: none !important;
 }
 
-.e-btn-group.custom-rbt-group .e-btn{
-    width : 50%;
+.e-pager .e-numericitem {
+    color: #adb5bd;
+    background-color: #1a222b;
+    padding: 15px !important;
 }
 
-.custom-rbt-group label.e-btn{
-    box-shadow : none !important;
-    border : 1px solid #fff;
-    background-color : rgb(34 43 51);
+    .e-pager .e-numericitem:not(.e-currentitem) {
+        border: none !important;
+    }
+
+    .e-pager .e-numericitem:hover {
+        color: #fff;
+    }
+
+    .e-pager .e-numericitem.e-currentitem {
+        color: #fff;
+        border: none !important;
+        background-color: #31373d;
+    }
+
+.e-pager div.e-icons:not(.e-disable) {
     color: #fff;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.e-btn-group.custom-rbt-group input:checked + label.e-btn{
-    background-color : #fff;
-    color : #212b36;
-    border : 1px solid #fff;
+.e-grid .e-pager {
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+
 
 /* widget*/
 .widget {
